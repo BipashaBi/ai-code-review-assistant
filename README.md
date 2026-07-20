@@ -10,7 +10,7 @@ serves findings, complexity metrics, and a score in a dashboard.
 
 ![ACRA demo — submitting code and receiving a two-stage review](demo/demo.gif)
 
-▶ [Full demo video with narration on Google Drive](https://drive.google.com/your-link-here)
+▶(https://github.com/BipashaBi/ai-code-review-assistant/blob/main/demo/video.gif)
 
 - [x] Monorepo, PostgreSQL schema + migrations runner, JWT auth (register/login/profile/forgot-password)
 - [x] Dashboard, paste + file submission (Multer, 100KB cap, language inference), async review pipeline (202 + polling)
