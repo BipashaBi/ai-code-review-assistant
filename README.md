@@ -6,19 +6,23 @@ serves findings, complexity metrics, and a score in a dashboard.
 
 **Stack:** Next.js + Tailwind · Node.js/Express · PostgreSQL · JWT auth
 
-## Status — all 14 days complete
+# Demo
 
-- [x] Days 1–2: monorepo, PostgreSQL schema + migrations runner, JWT auth (register/login/profile/forgot-password)
-- [x] Days 3–4: dashboard, paste + file submission (Multer, 100KB cap, language inference), async review pipeline (202 + polling)
-- [x] Day 6: static analyzers — ESLint via Node API (JS), Pylint via subprocess (Python)
-- [x] Day 7: findings UI — severity badges, static/ai tabs, flagged-line highlighting, 0–100 scoring
-- [x] Day 8: AI review stage — LLM returns structured JSON findings; degrades gracefully when no API key is set
-- [x] Day 9: complexity metrics — cyclomatic complexity, per-function average, max nesting depth
-- [x] Day 10: AI documentation generation (`POST /api/reviews/:id/docs` + dashboard button)
-- [x] Day 11: review history with search, language/severity filters, pagination, delete
-- [x] Day 12: Jest + Supertest integration tests (9 tests: auth, validation, submissions, ownership)
-- [x] Day 13: Docker support (`docker-compose up` runs Postgres + server with pylint baked in)
-- [x] Day 14: API documentation (docs/API.md), deployment guide below
+![ACRA demo — submitting code and receiving a two-stage review](demo/demo.gif)
+
+▶ [Full demo video with narration on Google Drive](https://drive.google.com/your-link-here)
+
+- [x] Monorepo, PostgreSQL schema + migrations runner, JWT auth (register/login/profile/forgot-password)
+- [x] Dashboard, paste + file submission (Multer, 100KB cap, language inference), async review pipeline (202 + polling)
+- [x] Static analyzers — ESLint via Node API (JS), Pylint via subprocess (Python)
+- [x] Findings UI — severity badges, static/ai tabs, flagged-line highlighting, 0–100 scoring
+- [x] AI review stage — LLM returns structured JSON findings; degrades gracefully when no API key is set
+- [x] Complexity metrics — cyclomatic complexity, per-function average, max nesting depth
+- [x] AI documentation generation (`POST /api/reviews/:id/docs` + dashboard button)
+- [x] Review history with search, language/severity filters, pagination, delete
+- [x] Jest + Supertest integration tests (9 tests: auth, validation, submissions, ownership)
+- [x] Docker support (`docker-compose up` runs Postgres + server with pylint baked in)
+- [x] API documentation (docs/API.md), deployment guide below
 
 GitHub repository import is out of scope per the project brief.
 
