@@ -10,7 +10,7 @@ serves findings, complexity metrics, and a score in a dashboard.
 
 ![ACRA demo — submitting code and receiving a two-stage review](demo/video.gif)
 
-▶ **[Watch the full narrated demo video (7+ min) on Google Drive](https://drive.google.com/file/d/1pqXKKcdXuOJi4tuwwVKGeO35TKHyaUW0)**
+▶ **[Video of Demo](https://drive.google.com/file/d/1pqXKKcdXuOJi4tuwwVKGeO35TKHyaUW0)**
 
 
 ## Features
