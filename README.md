@@ -6,23 +6,24 @@ serves findings, complexity metrics, and a score in a dashboard.
 
 **Stack:** Next.js + Tailwind · Node.js/Express · PostgreSQL · JWT auth
 
-# Demo
+## 📹 Demo
 
-![ACRA demo](https://drive.google.com/file/d/1pqXKKcdXuOJi4tuwwVKGeO35TKHyaUW0/view?usp=sharing)
+![ACRA demo — submitting code and receiving a two-stage review](demo/video.gif)
 
-![ACRA demo](demo/video.gif)
+▶ **[Watch the full narrated demo video (7+ min) on Google Drive](https://drive.google.com/file/d/1pqXKKcdXuOJi4tuwwVKGeO35TKHyaUW0)**
 
-- [x] Monorepo, PostgreSQL schema + migrations runner, JWT auth (register/login/profile/forgot-password)
-- [x] Dashboard, paste + file submission (Multer, 100KB cap, language inference), async review pipeline (202 + polling)
-- [x] Static analyzers — ESLint via Node API (JS), Pylint via subprocess (Python)
-- [x] Findings UI — severity badges, static/ai tabs, flagged-line highlighting, 0–100 scoring
-- [x] AI review stage — LLM returns structured JSON findings; degrades gracefully when no API key is set
-- [x] Complexity metrics — cyclomatic complexity, per-function average, max nesting depth
-- [x] AI documentation generation (`POST /api/reviews/:id/docs` + dashboard button)
-- [x] Review history with search, language/severity filters, pagination, delete
-- [x] Jest + Supertest integration tests (9 tests: auth, validation, submissions, ownership)
-- [x] Docker support (`docker-compose up` runs Postgres + server with pylint baked in)
-- [x] API documentation (docs/API.md), deployment guide below
+
+## Features
+
+- **Two-stage review pipeline** — static analysis (ESLint via Node API for JavaScript, Pylint via subprocess for Python) followed by an AI review stage that returns structured JSON findings; runs asynchronously (202 Accepted + status polling) so long analyses never block a request
+- **Code submission** — paste snippets or upload source files (Multer, 100 KB cap, language inferred from extension, unsupported types rejected cleanly)
+- **Findings dashboard** — severity badges, static/ai stage tabs, flagged-line highlighting in the code view, and a transparent 0–100 score (penalty per finding by severity)
+- **Complexity metrics** — cyclomatic complexity, per-function average, max nesting depth, LOC, function/class counts
+- **AI documentation generation** — `POST /api/reviews/:id/docs` plus a dashboard button that produces JSDoc/docstring-annotated code
+- **Review history** — search, language/severity filters, pagination, delete; every query scoped to the authenticated user
+- **Auth** — JWT-based register/login/profile, bcrypt-hashed passwords
+- **Graceful degradation** — without an AI API key, reviews still complete with static findings, metrics, and scoring
+- **Quality tooling** — 9 Jest + Supertest integration tests, Docker Compose setup (Postgres + server with pylint baked in), full API reference in [docs/API.md](docs/API.md)
 
 GitHub repository import is out of scope per the project brief.
 
