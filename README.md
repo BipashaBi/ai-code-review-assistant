@@ -8,7 +8,7 @@ serves findings, complexity metrics, and a score in a dashboard.
 
 # Demo
 
-![ACRA demo — submitting code and receiving a two-stage review](demo/demo.gif)
+![ACRA demo](https://drive.google.com/file/d/1pqXKKcdXuOJi4tuwwVKGeO35TKHyaUW0/view?usp=sharing)
 
 ![ACRA demo](demo/video.gif)
 
